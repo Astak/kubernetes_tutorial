@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: html-generator
-        image: uriahas/fortune
+        image: uriahas/fortune:args
+        args: ["2"]
         volumeMounts:
         - name: html
           mountPath: /var/htdocs
