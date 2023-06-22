@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  name: kubia
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - kubia.example.com
+    - fortune.example.com
+    secretName: tks-secret
+  rules:
+  - host: kubia.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: kubia
+            port:
+              number: 80
+  - host: fortune.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: fortune
+            port:
+              number: 80
