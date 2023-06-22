@@ -4,7 +4,7 @@ metadata:
   name: mongodb
 spec:
   containers:
-  - image: mongo:5.0.18
+  - image: mongo:4.4.22
     name: mongodb
     volumeMounts:
     - name: mongodb-data
