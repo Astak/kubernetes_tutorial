@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongodb-pvc
 spec:
+  storageClassName: nfs-client
   resources:
     requests:
-      storage: 1Gi
+      storage: 100Mi
   accessModes:
   - ReadWriteOnce
-  storageClassName: ""
