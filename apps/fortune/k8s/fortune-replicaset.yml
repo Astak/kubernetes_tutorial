@@ -15,7 +15,9 @@ spec:
       containers:
       - name: html-generator
         image: uriahas/fortune:args
-        args: ["2"]
+        env:
+        - name: INTERVAL
+          value: "30"
         volumeMounts:
         - name: html
           mountPath: /var/htdocs
