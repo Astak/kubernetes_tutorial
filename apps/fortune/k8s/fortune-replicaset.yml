@@ -42,4 +42,4 @@ spec:
         emptyDir: {}
       - name: config
         configMap:
-          name: nginx.conf
+          name: fortune-config
