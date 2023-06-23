@@ -44,7 +44,6 @@ spec:
       - name: config
         configMap:
           name: fortune-config
-          defaultMode: "6600"
           items:
           - key: nginx.conf
             path: gzip.conf
