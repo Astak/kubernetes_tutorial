@@ -43,3 +43,6 @@ spec:
       - name: config
         configMap:
           name: fortune-config
+          items:
+          - key: nginx.conf
+            path: gzip.conf
