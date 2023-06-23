@@ -17,7 +17,10 @@ spec:
         image: uriahas/fortune:args
         env:
         - name: INTERVAL
-          value: "30"
+          valueFrom:
+            configMapKeyRef:
+              name: fortune-config
+              key: sleep-interval
         volumeMounts:
         - name: html
           mountPath: /var/htdocs
