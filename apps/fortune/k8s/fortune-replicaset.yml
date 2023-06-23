@@ -33,7 +33,7 @@ spec:
           readOnly: true
         - name: config
           mountPath: /etc/nginx/conf.d
-          readOnly: true
+          subPath: gzip.conf
         ports:
         - containerPort: 80
           protocol: TCP
@@ -45,4 +45,4 @@ spec:
           name: fortune-config
           items:
           - key: nginx.conf
-            subPath: gzip.conf
+            path: gzip.conf
