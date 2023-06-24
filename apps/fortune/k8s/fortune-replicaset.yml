@@ -12,6 +12,8 @@ spec:
       labels:
         app: fortune
     spec:
+      imagePullSecrets:
+      - name: mydockerhubsecret
       containers:
       - name: html-generator
         image: uriahas/fortune:args
