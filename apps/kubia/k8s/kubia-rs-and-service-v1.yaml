@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app:kubia
+        app: kubia
     spec:
       containers:
       - image: uriahas/kubia:v1
