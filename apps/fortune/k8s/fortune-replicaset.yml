@@ -35,6 +35,9 @@ spec:
           mountPath: /etc/nginx/conf.d/gzip.conf
           subPath: gzip.conf
           readOnly: true
+        - name: certs
+          secret:
+            secretName: fortune-https
         ports:
         - containerPort: 80
           protocol: TCP
